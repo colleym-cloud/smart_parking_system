@@ -1,4 +1,4 @@
-# app.py
+ # app.py
 from flask import Flask, render_template
 import paho.mqtt.subscribe as subscribe
 
@@ -13,4 +13,4 @@ def get_sensor_status():
     return msg.payload.decode('utf-8')
 
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0')
+    app.run(debug=True, host='0.0.0.0', port=8080)
